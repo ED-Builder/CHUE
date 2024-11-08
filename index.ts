@@ -11,17 +11,17 @@ class ChangeUsernameHandler extends Handler {
         // 检查输入
         let udoc = await UserModel.getByUname(domainId, uidOrName);
         if (!udoc)
-            throw new NotFoundError(uidOrName);
+            throw new NotFoundError('你确定这个用户对吗？');
         text = text.replace('\'', '').replace('\"', '');
         if (!text)
-            throw new NotFoundError('text');
+            throw new NotFoundError('这个空不写留着我给你写？');
         // 用户名小写
         const Lowtext: string = text.toLowerCase();
         // 构建徽章代码并更新
         await UserModel.setById(udoc._id, { uname: text});
         await UserModel.setById(udoc._id, { unameLower: Lowtext})
         // 将用户重定向到创建完成的url
-        this.response.redirect = "/";
+        this.response.redirect = "/?notification=修改成功！";
     }
 }
 
