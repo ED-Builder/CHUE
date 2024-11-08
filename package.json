@@ -1,0 +1,8 @@
+{
+  "name": "change-username",
+  "version": "0.0.1",
+  "description": "This plugin can change a user's username easily.",
+  "main": "index.ts",
+  "author": "ED_Builder",
+  "license": "AGPL-3.0"
+}
