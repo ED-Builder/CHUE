@@ -5,5 +5,3 @@ Change Hydro Username Easliy（简单地修改Hydro用户名）
 2. 打开终端，添加这个插件文件夹 `hydrooj addon add /path/to/this/addon`
 3. 重启进程 `pm2 restart hydrooj`
 4. 访问你的网站的 `/change-username` 目录，开始使用吧
-## 请注意
-这个插件请一定搭配 BHUC 使用！
